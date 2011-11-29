@@ -1,4 +1,6 @@
 <?php
+require "config.php";
+
 $err = 1;
 while($err > 0) {
 	$err = 0;
@@ -13,12 +15,13 @@ while($err > 0) {
 		echo "<p> Enter password.</p>\n";
 	}
 }
+/*
 $dbconnect = oci_connect($db_user, $db_pass, $db_host);
 if ($dbconnect === FALSE) {
 	echo "<p>Unable to connect to the database server.</p>\n";
 	++$err;
 }
-
+*/
 if ($err == 0) {
 	$plsql = "SELECT NAME FROM STAFF, STAFF_NAME_SSN WHERE USERNAME = :susername AND PASSWORD = :spassword AND STAFF.SSN = STAFF_NAME_SSN.SSN";
 	$stmt = oci_parse($dbconnect, $plsql);
