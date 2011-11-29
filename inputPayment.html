@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Input Payment - Credit Card Management System
+</title>
+</head>
+<body>
+<h1>Input Payment</h1>
+<form action="inputPayment.php" method="post">
+Account Number <input type="number" name="accountNumber" />
+Date <input type="date" name="adate" />
+Type <select name="type">
+		<option value="P">Payment</option>
+		<option value="T">Transaction</option>
+	</select>
+Staff Number<input type="number" name="staffNumber" />
+Merchant<input type="text" name="merchant">
+Amount <input type="currency" name="amount" />
+<input type="submit" name="Add" />
+<input type="reset" name="Reset" />
+</form>
+</body>
+</html>
